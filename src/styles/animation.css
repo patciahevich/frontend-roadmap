@@ -1,0 +1,33 @@
+a:hover,
+.label:hover,
+button:hover {
+  transform: var(--scale);
+}
+
+.label:hover svg {
+  fill: var(--red);
+  stroke: none;
+}
+
+input:focus {
+  outline-color: var(--green);
+}
+
+li svg:hover {
+  transform: var(--scale);
+}
+
+@keyframes launch {
+  0% {
+    opacity: 0;
+    transform: translate(-120%, 120%) rotate(-15deg) scale(0.6);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(10px, -10px) rotate(2deg) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0) scale(1);
+  }
+}

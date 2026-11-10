@@ -1,0 +1,63 @@
+@media (width < 900px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .search span,
+  input {
+    font-size: 14px;
+  }
+
+  aside {
+    width: 30%;
+  }
+
+  aside img {
+    display: none;
+  }
+
+  main,
+  header,
+  footer {
+    padding: 0 20px;
+  }
+}
+
+@media (width < 745px) {
+  main {
+    flex-direction: column-reverse;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  aside img {
+    display: flex;
+  }
+
+  .search {
+    width: 100%;
+
+    padding: 20px;
+  }
+}
+
+@media (width < 440px) {
+  form {
+    flex-direction: column;
+  }
+
+  input {
+    height: 50px;
+  }
+
+  form button {
+    width: 100%;
+  }
+
+  .catalog {
+    align-self: center;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 200px));
+  }
+}

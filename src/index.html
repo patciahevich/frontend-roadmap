@@ -5,139 +5,383 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Catalog</title>
     <link rel="icon" href="./assets/favicon.png" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/animation.css" />
+    <link rel="stylesheet" href="./styles/queries.css" />
   </head>
 
   <body>
-    <header>
-      <img src="./assets/book.svg" alt="logo" />
-      <h3>The Library</h3>
-      <p>Discover your next favorite book</p>
+    <header class="grid underline">
+      <div class="logo icon">
+        <img src="./assets/book.svg" alt="logo" />
+      </div>
+      <div class="title">
+        <h3>The Library</h3>
+        <span>Discover your next favorite book</span>
+      </div>
     </header>
+    <section class="search">
+      <h1>Discover Your Next Great Read</h1>
+      <span>
+        Search million of books, build your personal library, and never lose
+        track of what to read next
+      </span>
+      <form>
+        <img src="./assets/search.svg" />
+        <input
+          id="search"
+          type="search"
+          placeholder="Search for books by title or author ..."
+        />
+        <button type="submit">Search</button>
+      </form>
+    </section>
     <main>
-      <section class="search">
-        <h1>Discover Your Next Great Read</h1>
-        <p>
-          Search million of books, build your personal library, and never lose
-          track of what to read next
-        </p>
-        <form>
-          <img src="./assets/search.svg" />
-          <input
-            type="search"
-            placeholder="Search for books by title or author ..."
-          />
-          <button type="submit">Search</button>
-        </form>
-      </section>
-
       <section class="catalog">
-        <article>
+        <article class="book">
           <img alt="cover" />
-          <img src="./assets/heart.svg" alt="add to favorites" />
-          <p class="name">The Great Gatsby</p>
-          <p class="author">F. Scott Fitzgerald</p>
-          <p class="year">1925</p>
+          <div class="label icon">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6667 9.33333C13.66 8.36 14.6667 7.19333 14.6667 5.66667C14.6667 4.69421 14.2804 3.76158 13.5928 3.07394C12.9051 2.38631 11.9725 2 11 2C9.82671 2 9.00004 2.33333 8.00004 3.33333C7.00004 2.33333 6.17337 2 5.00004 2C4.02758 2 3.09495 2.38631 2.40732 3.07394C1.71968 3.76158 1.33337 4.69421 1.33337 5.66667C1.33337 7.2 2.33337 8.36667 3.33337 9.33333L8.00004 14L12.6667 9.33333Z"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="description">
+            <p class="name">The Great Gatsby</p>
+            <span class="author">F. Scott Fitzgerald</span>
+            <span class="year">1925</span>
+          </div>
         </article>
 
-        <article>
+        <article class="book">
           <img alt="cover" />
-          <img src="./assets/heart.svg" alt="add to favorites" />
-          <p class="name">Pride and Prejudice</p>
-          <p class="author">Jane Austen</p>
-          <p class="year">1813</p>
+          <div class="label icon">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6667 9.33333C13.66 8.36 14.6667 7.19333 14.6667 5.66667C14.6667 4.69421 14.2804 3.76158 13.5928 3.07394C12.9051 2.38631 11.9725 2 11 2C9.82671 2 9.00004 2.33333 8.00004 3.33333C7.00004 2.33333 6.17337 2 5.00004 2C4.02758 2 3.09495 2.38631 2.40732 3.07394C1.71968 3.76158 1.33337 4.69421 1.33337 5.66667C1.33337 7.2 2.33337 8.36667 3.33337 9.33333L8.00004 14L12.6667 9.33333Z"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="description">
+            <p class="name">Pride and Prejudice</p>
+            <span class="author">Jane Austen</span>
+            <span class="year">1813</span>
+          </div>
         </article>
 
-        <article>
+        <article class="book">
           <img alt="cover" />
-          <img src="./assets/heart.svg" alt="add to favorites" />
-          <p class="name">To Kill a Mockingbird</p>
-          <p class="author">Harper Lee</p>
-          <p class="year">1960</p>
+          <div class="label icon">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6667 9.33333C13.66 8.36 14.6667 7.19333 14.6667 5.66667C14.6667 4.69421 14.2804 3.76158 13.5928 3.07394C12.9051 2.38631 11.9725 2 11 2C9.82671 2 9.00004 2.33333 8.00004 3.33333C7.00004 2.33333 6.17337 2 5.00004 2C4.02758 2 3.09495 2.38631 2.40732 3.07394C1.71968 3.76158 1.33337 4.69421 1.33337 5.66667C1.33337 7.2 2.33337 8.36667 3.33337 9.33333L8.00004 14L12.6667 9.33333Z"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="description">
+            <p class="name">To Kill a Mockingbird</p>
+            <span class="author">Harper Lee</span>
+            <span class="year">1960</span>
+          </div>
         </article>
 
-        <article>
+        <article class="book">
           <img alt="cover" />
-          <img src="./assets/heart.svg" alt="add to favorites" />
-          <p class="name">The Catcher in the Rye</p>
-          <p class="author">J.D. Salinger</p>
-          <p class="year">1951</p>
+          <div class="label icon">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6667 9.33333C13.66 8.36 14.6667 7.19333 14.6667 5.66667C14.6667 4.69421 14.2804 3.76158 13.5928 3.07394C12.9051 2.38631 11.9725 2 11 2C9.82671 2 9.00004 2.33333 8.00004 3.33333C7.00004 2.33333 6.17337 2 5.00004 2C4.02758 2 3.09495 2.38631 2.40732 3.07394C1.71968 3.76158 1.33337 4.69421 1.33337 5.66667C1.33337 7.2 2.33337 8.36667 3.33337 9.33333L8.00004 14L12.6667 9.33333Z"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="description">
+            <p class="name">The Catcher in the Rye</p>
+            <span class="author">J.D. Salinger</span>
+            <span class="year">1951</span>
+          </div>
         </article>
 
-        <article>
+        <article class="book">
           <img alt="cover" />
-          <img src="./assets/heart.svg" alt="add to favorites" />
-          <p class="name">The Hobbit</p>
-          <p class="author">J.R.R. Tolkien</p>
-          <p class="year">1937</p>
+          <div class="label icon piked">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6667 9.33333C13.66 8.36 14.6667 7.19333 14.6667 5.66667C14.6667 4.69421 14.2804 3.76158 13.5928 3.07394C12.9051 2.38631 11.9725 2 11 2C9.82671 2 9.00004 2.33333 8.00004 3.33333C7.00004 2.33333 6.17337 2 5.00004 2C4.02758 2 3.09495 2.38631 2.40732 3.07394C1.71968 3.76158 1.33337 4.69421 1.33337 5.66667C1.33337 7.2 2.33337 8.36667 3.33337 9.33333L8.00004 14L12.6667 9.33333Z"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="description">
+            <p class="name">The Hobbit</p>
+            <span class="author">J.R.R. Tolkien</span>
+            <span class="year">1937</span>
+          </div>
         </article>
 
-        <article>
+        <article class="book">
           <img alt="cover" />
-          <img src="./assets/heart.svg" alt="add to favorites" />
-          <p class="name">Fahrenheit 451</p>
-          <p class="author">Ray Bradbury</p>
-          <p class="year">1953</p>
+          <div class="label icon">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6667 9.33333C13.66 8.36 14.6667 7.19333 14.6667 5.66667C14.6667 4.69421 14.2804 3.76158 13.5928 3.07394C12.9051 2.38631 11.9725 2 11 2C9.82671 2 9.00004 2.33333 8.00004 3.33333C7.00004 2.33333 6.17337 2 5.00004 2C4.02758 2 3.09495 2.38631 2.40732 3.07394C1.71968 3.76158 1.33337 4.69421 1.33337 5.66667C1.33337 7.2 2.33337 8.36667 3.33337 9.33333L8.00004 14L12.6667 9.33333Z"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="description">
+            <p class="name">Fahrenheit 451</p>
+            <span class="author">Ray Bradbury</span>
+            <span class="year">1953</span>
+          </div>
         </article>
 
-        <article>
+        <article class="book">
           <img alt="cover" />
-          <img src="./assets/heart.svg" alt="add to favorites" />
-          <p class="name">Brave New World</p>
-          <p class="author">Aldous Huxley</p>
-          <p class="year">1932</p>
+          <div class="label icon piked">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6667 9.33333C13.66 8.36 14.6667 7.19333 14.6667 5.66667C14.6667 4.69421 14.2804 3.76158 13.5928 3.07394C12.9051 2.38631 11.9725 2 11 2C9.82671 2 9.00004 2.33333 8.00004 3.33333C7.00004 2.33333 6.17337 2 5.00004 2C4.02758 2 3.09495 2.38631 2.40732 3.07394C1.71968 3.76158 1.33337 4.69421 1.33337 5.66667C1.33337 7.2 2.33337 8.36667 3.33337 9.33333L8.00004 14L12.6667 9.33333Z"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="description">
+            <p class="name">Brave New World</p>
+            <span class="author">Aldous Huxley</span>
+            <span class="year">1932</span>
+          </div>
         </article>
 
-        <article>
+        <article class="book">
           <img alt="cover" />
-          <img src="./assets/heart.svg" alt="add to favorites" />
-          <p class="name">The Lord of the Rings</p>
-          <p class="author">J.R.R. Tolkien</p>
-          <p class="year">1954</p>
+          <div class="label icon">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6667 9.33333C13.66 8.36 14.6667 7.19333 14.6667 5.66667C14.6667 4.69421 14.2804 3.76158 13.5928 3.07394C12.9051 2.38631 11.9725 2 11 2C9.82671 2 9.00004 2.33333 8.00004 3.33333C7.00004 2.33333 6.17337 2 5.00004 2C4.02758 2 3.09495 2.38631 2.40732 3.07394C1.71968 3.76158 1.33337 4.69421 1.33337 5.66667C1.33337 7.2 2.33337 8.36667 3.33337 9.33333L8.00004 14L12.6667 9.33333Z"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="description">
+            <p class="name">The Lord of the Rings</p>
+            <span class="author">J.R.R. Tolkien</span>
+            <span class="year">1954</span>
+          </div>
         </article>
 
-        <article>
+        <article class="book">
           <img alt="cover" />
-          <img src="./assets/heart.svg" alt="add to favorites" />
-          <p class="name">Jane Eyre</p>
-          <p class="author">Charlotte Brontë</p>
-          <p class="year">1847</p>
+          <div class="label icon">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6667 9.33333C13.66 8.36 14.6667 7.19333 14.6667 5.66667C14.6667 4.69421 14.2804 3.76158 13.5928 3.07394C12.9051 2.38631 11.9725 2 11 2C9.82671 2 9.00004 2.33333 8.00004 3.33333C7.00004 2.33333 6.17337 2 5.00004 2C4.02758 2 3.09495 2.38631 2.40732 3.07394C1.71968 3.76158 1.33337 4.69421 1.33337 5.66667C1.33337 7.2 2.33337 8.36667 3.33337 9.33333L8.00004 14L12.6667 9.33333Z"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="description">
+            <p class="name">Jane Eyre</p>
+            <span class="author">Charlotte Brontë</span>
+            <span class="year">1847</span>
+          </div>
         </article>
 
-        <article>
+        <article class="book">
           <img alt="cover" />
-          <img src="./assets/heart.svg" alt="add to favorites" />
-          <p class="name">Wuthering Heights</p>
-          <p class="author">Emily Brontë</p>
-          <p class="year">1847</p>
+          <div class="label icon piked">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6667 9.33333C13.66 8.36 14.6667 7.19333 14.6667 5.66667C14.6667 4.69421 14.2804 3.76158 13.5928 3.07394C12.9051 2.38631 11.9725 2 11 2C9.82671 2 9.00004 2.33333 8.00004 3.33333C7.00004 2.33333 6.17337 2 5.00004 2C4.02758 2 3.09495 2.38631 2.40732 3.07394C1.71968 3.76158 1.33337 4.69421 1.33337 5.66667C1.33337 7.2 2.33337 8.36667 3.33337 9.33333L8.00004 14L12.6667 9.33333Z"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="description">
+            <p class="name">Wuthering Heights</p>
+            <span class="author">Emily Brontë</span>
+            <span class="year">1847</span>
+          </div>
         </article>
       </section>
       <aside>
-        <img src="./assets/heart.svg" />
-        <h4>Favorites</h4>
-        <p>3 books saved</p>
+        <div class="grid underline">
+          <div class="fav icon">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6667 9.33333C13.66 8.36 14.6667 7.19333 14.6667 5.66667C14.6667 4.69421 14.2804 3.76158 13.5928 3.07394C12.9051 2.38631 11.9725 2 11 2C9.82671 2 9.00004 2.33333 8.00004 3.33333C7.00004 2.33333 6.17337 2 5.00004 2C4.02758 2 3.09495 2.38631 2.40732 3.07394C1.71968 3.76158 1.33337 4.69421 1.33337 5.66667C1.33337 7.2 2.33337 8.36667 3.33337 9.33333L8.00004 14L12.6667 9.33333Z"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="title">
+            <h5>Favorites</h5>
+            <span>3 books saved</span>
+          </div>
+        </div>
         <ul>
-          <li>
+          <li class="underline">
             <img alt="cover" />
-            <img src="./assets/heart.svg" alt="add to favorites" />
-            <p class="name">The Hobbit</p>
-            <p class="author">J.R.R. Tolkien</p>
-            <p class="year">1937</p>
+            <div class="description">
+              <p class="name">The Hobbit</p>
+              <span class="author">J.R.R. Tolkien</span>
+              <span class="year">1937</span>
+            </div>
+            <svg
+              class="picked"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6667 9.33333C13.66 8.36 14.6667 7.19333 14.6667 5.66667C14.6667 4.69421 14.2804 3.76158 13.5928 3.07394C12.9051 2.38631 11.9725 2 11 2C9.82671 2 9.00004 2.33333 8.00004 3.33333C7.00004 2.33333 6.17337 2 5.00004 2C4.02758 2 3.09495 2.38631 2.40732 3.07394C1.71968 3.76158 1.33337 4.69421 1.33337 5.66667C1.33337 7.2 2.33337 8.36667 3.33337 9.33333L8.00004 14L12.6667 9.33333Z"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </li>
 
-          <li>
+          <li class="underline">
             <img alt="cover" />
-            <img src="./assets/heart.svg" alt="add to favorites" />
-            <p class="name">Dune</p>
-            <p class="author">Frank Herbert</p>
-            <p class="year">1965</p>
+            <div class="description">
+              <p class="name">Dune</p>
+              <span class="author">Frank Herbert</span>
+              <span class="year">1965</span>
+            </div>
+            <svg
+              class="picked"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6667 9.33333C13.66 8.36 14.6667 7.19333 14.6667 5.66667C14.6667 4.69421 14.2804 3.76158 13.5928 3.07394C12.9051 2.38631 11.9725 2 11 2C9.82671 2 9.00004 2.33333 8.00004 3.33333C7.00004 2.33333 6.17337 2 5.00004 2C4.02758 2 3.09495 2.38631 2.40732 3.07394C1.71968 3.76158 1.33337 4.69421 1.33337 5.66667C1.33337 7.2 2.33337 8.36667 3.33337 9.33333L8.00004 14L12.6667 9.33333Z"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </li>
 
-          <li>
+          <li class="underline">
             <img alt="cover" />
-            <img src="./assets/heart.svg" alt="add to favorites" />
-            <p class="name">Pride and Prejudice</p>
-            <p class="author">Jane Austen</p>
-            <p class="year">1813</p>
+            <div class="description">
+              <p class="name">Pride and Prejudice</p>
+              <span class="author">Jane Austen</span>
+              <span class="year">1813</span>
+            </div>
+
+            <svg
+              class="picked"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6667 9.33333C13.66 8.36 14.6667 7.19333 14.6667 5.66667C14.6667 4.69421 14.2804 3.76158 13.5928 3.07394C12.9051 2.38631 11.9725 2 11 2C9.82671 2 9.00004 2.33333 8.00004 3.33333C7.00004 2.33333 6.17337 2 5.00004 2C4.02758 2 3.09495 2.38631 2.40732 3.07394C1.71968 3.76158 1.33337 4.69421 1.33337 5.66667C1.33337 7.2 2.33337 8.36667 3.33337 9.33333L8.00004 14L12.6667 9.33333Z"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </li>
         </ul>
       </aside>
