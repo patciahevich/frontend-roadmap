@@ -1,5 +1,6 @@
 a:hover,
 .label:hover,
+.aside_label:hover,
 button:hover {
   transform: var(--scale);
 }
@@ -11,10 +12,6 @@ button:hover {
 
 input:focus {
   outline-color: var(--green);
-}
-
-li svg:hover {
-  transform: var(--scale);
 }
 
 @keyframes launch {

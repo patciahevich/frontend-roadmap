@@ -143,21 +143,13 @@ li img {
   background-color: var(--yellow);
 }
 
-li svg {
-  position: absolute;
-  top: calc(50% - 8px);
-  right: 10px;
-
-  cursor: pointer;
-  transition: var(--scale-animation);
-}
-
 li svg.picked {
   fill: var(--red);
   stroke: none;
 }
 
 svg {
+  fill: none;
   stroke: var(--text);
 }
 
